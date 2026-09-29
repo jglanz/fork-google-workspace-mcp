@@ -30,7 +30,8 @@ from auth.oauth_config import (
 )
 from core.config import (
     get_transport_mode,
-    get_oauth_redirect_uri, WORKSPACE_MCP_TIMEOUT,
+    get_oauth_redirect_uri,
+    WORKSPACE_MCP_TIMEOUT,
 )
 from core.context import get_fastmcp_session_id
 
@@ -43,6 +44,7 @@ except ImportError:
 # Configure logging
 logging.basicConfig(level=logging.INFO)
 logger = logging.getLogger(__name__)
+
 
 def _session_id_log_fingerprint(session_id: Optional[str]) -> str:
     """Return a stable, non-reversible session identifier for logs."""
